@@ -2,8 +2,10 @@ from pathlib import Path
 import shutil
 import os
 
-source_files = Path("/Volumes/PROD/IO/IN/Internal/ZZL/20230329_PK/mov")
-target_files = Path("/Volumes/PROD/ShotFinal")
+source_files_path = input("Enter the path of your movs: ")
+target_files_path = input("Enter the path of your movs going to move to: ")
+source_files = Path(source_files_path)
+target_files = Path(target_files_path)
 
 for file in source_files.iterdir():
     if file.name != '.DS_Store' and file.is_file():
